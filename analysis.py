@@ -100,39 +100,3 @@ if __name__ == '__main__':
     centroids = load_centroids("mnist_final_centroids.csv")
     data, label = read_data("data/mnist.csv")
     print(accuracy(data, label, centroids))
-
-
-# LEAVE YOUR ANSWERS HERE...
-# 1. What happened to the centroids? Why are there fewer than 10?
-# The centroids converted ino new visual and now it looks like actual
-# digits rather previous
-# gaussian noised appearance, stored in MNIST/init file.
-# The centroid4 did not show up since it wasn't assigned to
-# any data point when we run
-# def update_assignment(data, labels, centroids):. Because this function
-# returns a new
-# dictionary whose keys are the centroids' key names and values are a list
-# of labels which are related to
-# each data points, if the centroid is not assigned to any of data
-# points as closest centroids at that moment,
-# we are not able to convert it at all, i.e. no process will be done by python.
-
-# 2. What's the accuracy of the algorithm on MNIST? By looking at the
-# centroids, which digits are easier to be distinguished by the algorithm,
-# and which are harder?
-# ...
-# Since we have accuray result as 0.582, in other words, our algorithm is
-# 58.2% correct and 41.8% contains an error,
-# we have only liitle bit above 1/2 probability success rate of getting
-# the corret result.
-# Centroid easier to understand: Centroid8, Centroid6,
-#                                Centroid5, Centroid2,
-#                                Centroid1
-# Centroid harder to understand: Centroid9, Centroid7,
-#                                Centroid3, Centroid0
-# This results is understandable since our algorithm has
-# 55-60% (58.2%) range success rate,
-# hale of the images should be readable and the others should be not.
-# The centroids that classified into harder (to understand),
-# it contains error data so irregular color was applied,
-# then as a result, it became harder to understand.
