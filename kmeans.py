@@ -135,9 +135,6 @@ def update_centroids(assignment_dict):
 
 
 def main_2d(data, init_centroids):
-    #######################################################
-    # You do not need to change anything in this function #
-    #######################################################
     centroids = init_centroids
     old_centroids = None
     step = 0
@@ -159,9 +156,6 @@ def main_2d(data, init_centroids):
 
 
 def main_mnist(data, init_centroids):
-    #######################################################
-    # You do not need to change anything in this function #
-    #######################################################
     centroids = init_centroids
     # plot initial centroids
     plot_centroids(centroids, "init")
