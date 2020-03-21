@@ -3,12 +3,6 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-###################################################
-# You do not need to change anything in this file #
-###################################################
-
-
 def read_data(fname):
     data = []
     label = []
